@@ -1,23 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Header from "./components/Header";
+import AddNote from "./components/CreateNote";
+import Footer from "./components/Footer"
+import Note from "./components/Note";
+//import notes from "../src/Notes";
 
 function App() {
+
+  const[allNotes, setAllNotes] = useState([]);
+  
+
+  function Addnote(note){
+    //console.log(note);
+    setAllNotes((allNotes) => {
+      if(note.title.length!==0 && note.content.length!==0){
+        return [...allNotes,note];
+      }
+      else{
+        return [...allNotes];
+      }
+      
+    }) 
+
+  }
+
+  function Deletenote(id){
+    //console.log("delete was triggered");
+    setAllNotes((prevValue) => {
+      return prevValue.filter((item, index) =>{
+        return index!==id;
+      })
+    })
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header/>
+      <AddNote adn={Addnote}/>
+      {allNotes.map((n,index) => {
+        return(<Note key={index} id={index} title={n.title} content={n.content} delete={Deletenote}/>)
+        })}
+      <Footer/>
     </div>
   );
 }

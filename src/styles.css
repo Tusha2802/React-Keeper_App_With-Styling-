@@ -1,0 +1,80 @@
+.header{
+    background-color:orange;
+    height: 70px;
+    color:white;
+    border: 1px solid white;
+    margin: -8px;
+}
+
+.keeper{
+    margin: 10px 0px 30px 50px;
+    font-family: "McLaren", cursive;
+}
+
+.footer{
+    text-align: center;
+    border: 0px solid red;
+    color: gray;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    align-items: center;
+    margin-left: -10px;
+}
+
+.note{
+    width: 250px;
+    overflow: auto;
+    border: 0px solid red;
+    margin-top: 20px;
+    margin-left: 40px;
+    border-radius: 7px;
+    text-align: center;
+    background-color: whitesmoke;
+    float:left;
+    font-family:"Mclaren",cursive ;
+    padding: 10px;
+}
+
+body{
+    background-color: wheat;
+}
+
+.addNote{
+    width: 450px;
+    padding: 20px;
+    margin: 2% 35%;
+    background-color: whitesmoke;
+    border-radius: 7px;
+}
+
+.addNote_input{
+    padding: 10px;
+    width: 95%;
+    border: 0;
+    font-size: 15px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: whitesmoke;
+    resize: none;
+}
+
+.button-box{
+    background-color: orange;
+    color: whitesmoke;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 15px;
+    margin: 7% 0% 0 -3%;
+    position: absolute;
+}
+
+.del-btn{
+    border: 0;
+    color: red;
+    margin: 0  0 5% 70%;
+    border: 0px solid black;
+    overflow: auto;
+    text-align: right;
+    width: 60px;
+    text-decoration: underline;
+}
